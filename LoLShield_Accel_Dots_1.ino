@@ -39,6 +39,8 @@ void setup()
   Wire.begin();
   accel.init();
   accel.enableDefault();    // +/- 2g range
+  accel.writeAccReg(accel.CTRL_REG4_A, 0x00);   // 0x10 will change to +/- 4g range, 0x11 is +/- 8g -  but I like more sensitive
+  
   LedSign::Init();
 
   memset(img, 0, sizeof(img)); // Clear the img[] array
