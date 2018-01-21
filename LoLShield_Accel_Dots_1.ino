@@ -3,7 +3,10 @@
  * Using my old Mini-IMU :   http://www.pololu.com/product/1265
  *                which uses an LSM303 accel / compass 
  * and a 9x14 Charliplexed LoL shield
-*/
+ *
+ * Most of the following is by Phillip Burgess   https://learn.adafruit.com/users/pburgess
+ *
+ */
 
 #include <Wire.h>
 #include <LSM303.h>
