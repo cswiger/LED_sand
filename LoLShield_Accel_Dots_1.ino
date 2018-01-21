@@ -212,7 +212,7 @@ void loop()
   //Serial.print("Now updating pixels...\n\r");
   for(i=0; i<WIDTH*HEIGHT; i++) {
     uint8_t col = i / WIDTH;
-    uint8_t row = i - col * WIDTH;
+    uint8_t row = i % WIDTH;
     LedSign::Set(row,col,img[i]);
   }
 
