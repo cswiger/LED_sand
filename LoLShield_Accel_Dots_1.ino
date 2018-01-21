@@ -211,9 +211,7 @@ void loop()
   // Update pixel data in LED driver
   //Serial.print("Now updating pixels...\n\r");
   for(i=0; i<WIDTH*HEIGHT; i++) {
-    uint8_t col = i / WIDTH;
-    uint8_t row = i % WIDTH;
-    LedSign::Set(row,col,img[i]);
+    LedSign::Set(i % WIDTH, i / WIDTH, img[i]);
   }
 
 
